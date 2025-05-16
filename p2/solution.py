@@ -11,11 +11,8 @@ def main():
     caps = [int(cap) for cap in input().split(" ")]
     
     institutes = [institute(cap) for cap in caps]
-    
 
     # read requests
-    extra = 0
-    
     for i in range(q):
         request = [int(num) for num in input().split(" ")]
 
@@ -30,7 +27,7 @@ def main():
                 donation = institutes[target_inst].donate(donation)
                 target_inst += 1
         
-        if t == 2:
+        elif t == 2:
             target_inst = request[1] - 1
             print(institutes[target_inst].get_balance())
 
@@ -42,8 +39,8 @@ class institute:
 
     def donate(self, donation: int):
         self.balance += donation
-        extra = self.balance % self.cap
-        if extra != 0:
+        extra = self.balance - self.cap
+        if extra > 0:
             self.balance = self.cap
         return extra
     
