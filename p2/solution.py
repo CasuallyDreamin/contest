@@ -44,7 +44,10 @@ class institute:
 
     def donate(self, donation: int):
         self.balance += donation
-        return self.balance % self.cap
+        extra = self.balance % self.cap
+        if extra != 0:
+            self.balance = self.cap
+        return extra
     
     def get_balance(self):
         return self.balance
