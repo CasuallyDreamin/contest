@@ -10,11 +10,9 @@ def main():
 
     caps = [int(cap) for cap in input().split(" ")]
     
-    institutes = n*[institute]
+    institutes = [institute(cap) for cap in caps]
     
-    for i, cap in enumerate(caps):
-        institutes[i] = institute(cap)
-    
+
     # read requests
     extra = 0
     
