@@ -12,7 +12,7 @@ def find_proper_divisors(n):
             divisors.add(i)
             if i != 1 and i != n // i and n // i != n:
                 divisors.add(n // i)
-    divisors.discard(n)  # remove the number itself if present
+    divisors.discard(n)
     return sorted(divisors)
 
 def check_sum_of_divisors(n):
@@ -26,7 +26,7 @@ def check_sum_of_divisors(n):
 
 def main():
     try:
-        n = int(input("num: "))
+        n = int(input())
         if n > 2**14 or n < 1:
             exit("Invalid input")
     except ValueError:

@@ -1,4 +1,5 @@
 from sys import exit
+
 def main():
     # read n and q
     line_1 = input().split(" ")
@@ -22,7 +23,6 @@ def main():
             target_inst, donation = request[1] - 1, request[2]
             while donation != 0:
                 if target_inst == n:
-                    extra += donation
                     break
                 donation = institutes[target_inst].donate(donation)
                 target_inst += 1
