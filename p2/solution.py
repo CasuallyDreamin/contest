@@ -12,10 +12,10 @@ def main():
     caps = [int(cap) for cap in input().split(" ")]
     
     institutes = [institute(cap) for cap in caps]
-
+    requests = [int(num) for num in input().split("\n")]
     # read requests
     for i in range(q):
-        request = [int(num) for num in input().split(" ")]
+        request = requests[i]
 
         t = request[0]
 
