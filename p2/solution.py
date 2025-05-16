@@ -31,7 +31,6 @@ def main():
             target_inst = request[1] - 1
             print(institutes[target_inst].get_balance())
 
-
 class institute:
     def __init__(self, cap: int):
         self.cap = cap
