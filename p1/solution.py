@@ -31,5 +31,8 @@ def main():
             exit("Invalid input")
     except ValueError:
         exit("Invalid input")
-        
+
     print(check_sum_of_divisors(n))
+
+if __name__ == "__main__":
+    main()
